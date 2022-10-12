@@ -1,0 +1,25 @@
+<h1>Add new food</h1>
+
+<%= form_with model: @food, url: foods_path, method: :post, local: true do |f|%>
+<div class="form-card">
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :measurement_unit %>
+    <%= f.text_field :measurement_unit %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+  </div>
+
+<% end %>

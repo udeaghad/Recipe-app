@@ -1,0 +1,33 @@
+<div>
+   <button><%= link_to "Add food", new_food_path %></button>
+</div>
+
+
+<div class='table-container'>
+<table>
+  <thead>
+     <tr>
+       <th class='food-col' >Food</th>
+       <th class='measurement-col'>Measurement Unit</th>
+       <th class='price-col'>Unit Price</th>
+       <th class='actions-col'>Actions</th>
+     </tr>
+  </thead>
+    <tbody>
+      <% @foods.each do |food| %>
+        <tr>  
+        <td><%=food.name%></td>
+        <td> <%= food.measurement_unit %> </td>
+        <td> $<%= food.price %> </td>
+        <td> <%= button_to "Delete", food_path(food.id), 
+                 method: :delete, data: {turbo_confirm: "Are you sure you want to delete #{food.name}?"} 
+              %> 
+        </td> 
+        </tr>     
+      <% end %>
+    
+    </tbody>
+
+</table>
+
+</div>
