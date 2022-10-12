@@ -18,9 +18,12 @@
     <%= f.text_field :price, class: 'w-full border border-gray-200 py-2 mb-2' %>
   </div>
 
-  <div>
-    <%= f.submit "Add food", class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 roundedn"%>
-  </div>
-  
+  <div class="flex justify-between">
+    <%= f.submit "Add food", class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"%>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <%= link_to "Cancel", root_path%>
+  </button>  
 <% end %>
+
+
 </div>
