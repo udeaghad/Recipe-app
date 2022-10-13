@@ -64,6 +64,7 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'bullet', '~> 7.0'
+  
 end
 
 group :test do
@@ -71,6 +72,8 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 gem 'devise'

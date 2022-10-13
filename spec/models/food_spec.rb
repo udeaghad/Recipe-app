@@ -1,5 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  before :each do
+    @food = Food.new(name: "Apple", measurement_unit: 'grams', price: '10.5')
+  end
+  # subject { Post.new(title: 'Politics', text: 'I like politics', user: @user) }
+
+  before { subject.save }
+
+  it 'name must not be blank.' do
+    @food.name = nil
+    expect(@food).to_not be_valid
+  end
+    
+    it 'measurement unit must not be blank.' do
+      @food.measurement_unit = nil
+      expect(@food).to_not be_valid
+    end
+
+    it 'price must not be blank.' do
+      @food.price = nil
+      expect(@food).to_not be_valid
+    end
 end
