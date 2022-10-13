@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "foods", type: :request do
   before :each do
-    sign_in create(:user, name: 'John Doe')
+    sign_in create(:user)
     get root_path
   end
 

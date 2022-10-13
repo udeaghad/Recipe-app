@@ -5,7 +5,6 @@ RSpec.describe Food, type: :model do
   before :each do
     @food = Food.new(name: "Apple", measurement_unit: 'grams', price: '10.5')
   end
-  # subject { Post.new(title: 'Politics', text: 'I like politics', user: @user) }
 
   before { subject.save }
 
