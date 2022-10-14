@@ -16,10 +16,10 @@ class FoodsController < ApplicationController
   def create
     @food = Food.new(food_params)
     if @food.save
-      flash[:success] = "Food successfully created"
+      flash[:success] = 'Food successfully created'
       redirect_to foods_path
     else
-      flash[:error] = "Something went wrong"
+      flash[:error] = 'Something went wrong'
       render 'new'
     end
   end
@@ -28,19 +28,15 @@ class FoodsController < ApplicationController
     @food = Food.find(params[:id])
     if @food.destroy
       flash[:success] = 'Food was successfully deleted.'
-      redirect_to foods_url
     else
       flash[:error] = 'Something went wrong'
-      redirect_to foods_url
     end
+    redirect_to foods_url
   end
-  
 
   private
 
-    def food_params
-      params.require(:food).permit(:name, :measurement_unit, :price)
-    end 
-  
-  
+  def food_params
+    params.require(:food).permit(:name, :measurement_unit, :price)
+  end
 end

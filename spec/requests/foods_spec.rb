@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "foods", type: :request do
+RSpec.describe 'foods', type: :request do
   before :each do
     sign_in create(:user)
     get root_path
   end
 
-   it 'works! (checked http status)' do   
+  it 'works! (checked http status)' do
     expect(response).to have_http_status(200)
   end
 

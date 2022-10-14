@@ -5,7 +5,6 @@ require 'support/controller_macros'
 require 'support/request_macros'
 require 'support/feature_macros'
 
-
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
@@ -67,9 +66,9 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-   config.include Devise::Test::ControllerHelpers, :type => :controller
-    config.include FactoryBot::Syntax::Methods
-    config.extend ControllerMacros, :type => :controller
-    config.include DeviseRequestSpecHelpers, type: :request 
-    config.include DeviseFeatureSpecHelpers, type: :feature
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include FactoryBot::Syntax::Methods
+  config.extend ControllerMacros, type: :controller
+  config.include DeviseRequestSpecHelpers, type: :request
+  config.include DeviseFeatureSpecHelpers, type: :feature
 end
