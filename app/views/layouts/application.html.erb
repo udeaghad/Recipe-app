@@ -11,16 +11,10 @@
   </head>
 
   <body>
+  <%= render 'layouts/navbar' %>
   
-  <% if user_signed_in?%>
-    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-
-    <h1>Welcome <%= current_user.name%> </h1>
-    
- <% else %>
     <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
- <% end %>
+    <p class="alert"><%= alert %></p> 
 
     <%= yield %>
   </body>
