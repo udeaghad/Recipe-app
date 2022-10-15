@@ -12,7 +12,7 @@
 - Rails
 - Postgresql
 - CSS
-- Bootstrap
+- Tailwind
 
 ## Live Demo (if available)
 
@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 - Run **rails db:migrate**
 
 ### Usage
-- navigate to the directory **cd Recipe-app** (case sensitive)
+- navigate to the directory `cd Recipe-app` (case sensitive, make sure you type the correct path)
 - Run `bundle install` on your terminal (in case you need to update gems run **bundle update**)
 - To setup database and tailwind run the following commands:
   - `rails db:create`
