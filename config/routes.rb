@@ -23,5 +23,5 @@ Rails.application.routes.draw do
   get 'shopping_list', to: "shopping_list#index"
 
   # Defines the root path route ("/")
-  root 'recipes#public_recipes'
+  root 'recipes#index'
 end

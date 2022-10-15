@@ -15,4 +15,6 @@ RSpec.describe 'inventories', type: :feature do
   it 'to have content Inventories' do
     expect(page).to have_content 'Your Inventories'
   end
+
+
 end

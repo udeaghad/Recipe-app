@@ -19,7 +19,12 @@ RSpec.describe 'foods', type: :feature do
     end
 
     it 'have a table with the food name' do
-      expect(page).to have_content(@food.name)
+      expect(page).to have_content(@food.name)  
+    end
+
+    it 'have a table with the food price' do  
+
+      expect(page).to have_content(@food.price)
     end
 
     it 'foods index page' do
