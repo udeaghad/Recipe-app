@@ -39,8 +39,8 @@ To get a local copy up and running follow these simple example steps.
   - `rails db:seed` (to populate initial data from db/seeds.rb file)
   - `rails tailwindcss:build` (to build necessary configurations for tailwind)
 - Run `rails s` on your terminal
-- Enter **http://localhost:3000/ or localhost:3000** on your browser to view page
-- **Congratulations!!! App should run successfully.**
+- Enter **http://localhost:3000/ or localhost:3000** on your browser to view the project.
+- **Congratulations! App should run successfully.**
 ## Authors
 
 👤 **Dozie Udeagha**
