@@ -22,13 +22,6 @@
 To get a local copy up and running follow these simple example steps.
 ### Setup
  **clone this [repo](https://github.com/udeaghad/recipe-app)**
-### Install
-
-- **Install Ruby**
-- **Install Rails**
-- **Install Postgresql or any RDMS that suits you** 
-- Run **rails db:create**
-- Run **rails db:migrate**
 
 ### Usage
 - navigate to the directory `cd Recipe-app` (case sensitive, make sure you type the correct path)
