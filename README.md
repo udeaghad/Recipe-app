@@ -1,5 +1,5 @@
 [![](https://img.shields.io/badge/Microverse-Dozie%20Udeagha-blueviolet)](https://github.com/udeaghad)
-[![](https://img.shields.io/badge/Microverse-Said%20Rašinlić-violet)](https://github.com/SaidRasinlic)
+[![](https://img.shields.io/badge/Microverse-Said%20Rašinlić-blue)](https://github.com/SaidRasinlic)
 [![](https://img.shields.io/badge/Microverse-Bright%20Kweku%20Ahiadeke-cyan)](https://github.com/kwekubright)
 # Recipe-App
 
