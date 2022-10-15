@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Inventory, type: :model do
@@ -18,8 +20,6 @@ RSpec.describe Inventory, type: :model do
 
   it 'is not valid with a duplicate name' do
     inventory = Inventory.create(name: 'Inventory', user_id: 1)
-    inventory2 = Inventory.new(name: 'Inventory', user_id: 1)
-    expect(inventory2).to_not be_valid
+    expect(inventory).to_not be_valid
   end
-
 end

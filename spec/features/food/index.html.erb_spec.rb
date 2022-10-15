@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'foods', type: :feature do
   before :each do
     sign_in create(:user)
-    
+
     @food = Food.create(name: 'Food', measurement_unit: 'unit', price: 100)
     visit foods_path
   end

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe FoodsController, type: :controller do
+RSpec.describe FoodsController, type: :controller do # rubocop:disable Metrics/BlockLength
   login_user
   let(:valid_attributes) do
     {
@@ -15,7 +17,7 @@ RSpec.describe FoodsController, type: :controller do
   end
 
   let(:valid_session) { {} }
-  
+
   describe 'GET #index' do
     it 'returns a success response' do
       get :index
@@ -26,9 +28,9 @@ RSpec.describe FoodsController, type: :controller do
   describe 'POST #create' do
     context 'with valid params' do
       it 'creates a new Food' do
-        expect {
+        expect do
           post :create, params: { food: valid_attributes }
-        }.to change(Food, :count).by(1)
+        end.to change(Food, :count).by(1)
       end
     end
   end
@@ -36,10 +38,9 @@ RSpec.describe FoodsController, type: :controller do
   describe 'DELETE #destroy' do
     it 'destroys the requested food' do
       food = Food.create! valid_attributes
-      expect {
+      expect do
         delete :destroy, params: { id: food.to_param }
-      }.to change(Food, :count).by(-1)
+      end.to change(Food, :count).by(-1)
     end
   end
-
 end

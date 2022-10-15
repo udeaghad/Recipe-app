@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'recipes', type: :feature do
@@ -13,5 +15,4 @@ RSpec.describe 'recipes', type: :feature do
   it 'to have content Recipes' do
     expect(page).to have_content 'Recipes'
   end
-
 end

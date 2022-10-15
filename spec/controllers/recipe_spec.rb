@@ -1,16 +1,12 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe RecipesController, type: :controller do
+RSpec.describe RecipesController, type: :controller do # rubocop:disable Metrics/BlockLength
   login_user
   let(:valid_attributes) do
-    {
-      name: 'Recipe',
-      user_id: subject.current_user.id,
-      id: 1,
-      public: true,
-      created_at: Time.now,
-      updated_at: Time.now
-    }
+    { name: 'Recipe', user_id: subject.current_user.id, id: 1,
+      public: true, created_at: Time.now, updated_at: Time.now }
   end
 
   let(:valid_session) { {} }
@@ -40,9 +36,9 @@ RSpec.describe RecipesController, type: :controller do
   describe 'POST #create' do
     context 'with valid params' do
       it 'creates a new Recipe' do
-        expect {
+        expect do
           post :create, params: { recipe: valid_attributes }
-        }.to change(Recipe, :count).by(1)
+        end.to change(Recipe, :count).by(1)
       end
     end
   end
@@ -50,9 +46,9 @@ RSpec.describe RecipesController, type: :controller do
   describe 'DELETE #destroy' do
     it 'destroys the requested recipe' do
       recipe = Recipe.create! valid_attributes
-      expect {
+      expect do
         delete :destroy, params: { id: recipe.to_param }
-      }.to change(Recipe, :count).by(-1)
+      end.to change(Recipe, :count).by(-1)
     end
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Food, type: :model do
@@ -18,7 +20,6 @@ RSpec.describe Food, type: :model do
 
   it 'is not valid with a duplicate name' do
     food = Food.create(name: 'Food', user_id: 1)
-    food2 = Food.new(name: 'Food', user_id: 1)
-    expect(food2).to_not be_valid
+    expect(food).to_not be_valid
   end
 end

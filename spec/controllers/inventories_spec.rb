@@ -1,14 +1,14 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe InventoriesController, type: :controller do
+RSpec.describe InventoriesController, type: :controller do # rubocop:disable Metrics/BlockLength
   login_user
   let(:valid_attributes) do
     {
       name: 'Inventory',
       user_id: subject.current_user.id,
-      id: 1,
-      created_at: Time.now,
-      updated_at: Time.now
+      id: 1
     }
   end
 
@@ -24,9 +24,9 @@ RSpec.describe InventoriesController, type: :controller do
   describe 'POST #create' do
     context 'with valid params' do
       it 'creates a new Inventory' do
-        expect {
+        expect do
           post :create, params: { inventory: valid_attributes }
-        }.to change(Inventory, :count).by(1)
+        end.to change(Inventory, :count).by(1)
       end
     end
   end
@@ -34,11 +34,9 @@ RSpec.describe InventoriesController, type: :controller do
   describe 'DELETE #destroy' do
     it 'destroys the requested inventory' do
       inventory = Inventory.create! valid_attributes
-      expect {
+      expect do
         delete :destroy, params: { id: inventory.to_param }
-      }.to change(Inventory, :count).by(-1)
+      end.to change(Inventory, :count).by(-1)
     end
   end
-
-
 end
