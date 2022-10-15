@@ -23,8 +23,8 @@ To get a local copy up and running follow these simple example steps.
 ### Setup
  **clone this [repo](https://github.com/udeaghad/recipe-app)**
 
-### Usage
-- navigate to the directory `cd Recipe-app` (case sensitive, make sure you type the correct path)
+### Usage and Installation
+- Navigate to the directory `cd Recipe-app` (case sensitive, make sure you type the correct path)
 - Run `bundle install` on your terminal (in case you need to update gems run **bundle update**)
 - To setup database and tailwind run the following commands:
   - `rails db:create`
