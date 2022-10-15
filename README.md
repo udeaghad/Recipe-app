@@ -25,7 +25,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Usage and Installation
 - Navigate to the directory `cd Recipe-app` (case sensitive, make sure you type the correct path)
-- Run `bundle install` on your terminal (in case you need to update gems run `bundle update`)
+- Run `bundle install` in your terminal (in case you need to update gems run `bundle update`)
 - To setup database and tailwind run the following commands:
   - `rails db:create`
   - `rails db:migrate`
