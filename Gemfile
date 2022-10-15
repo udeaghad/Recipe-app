@@ -72,6 +72,8 @@ group :test do
   gem 'rspec-rails', '~> 5.1'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 gem 'tailwindcss-rails', '~> 2.0'
