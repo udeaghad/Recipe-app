@@ -1,5 +1,5 @@
 [![](https://img.shields.io/badge/Microverse-Dozie%20Udeagha-blueviolet)](https://github.com/udeaghad)
-[![](https://img.shields.io/badge/Microverse-Said%20Rašinlić-violet)](https://github.com/SaidRasinlic)
+[![](https://img.shields.io/badge/Microverse-Said%20Rašinlić-blue)](https://github.com/SaidRasinlic)
 [![](https://img.shields.io/badge/Microverse-Bright%20Kweku%20Ahiadeke-cyan)](https://github.com/kwekubright)
 # Recipe-App
 
@@ -12,7 +12,7 @@
 - Rails
 - Postgresql
 - CSS
-- Bootstrap
+- Tailwind
 
 ## Live Demo (if available)
 
@@ -22,20 +22,18 @@
 To get a local copy up and running follow these simple example steps.
 ### Setup
  **clone this [repo](https://github.com/udeaghad/recipe-app)**
-### Install
 
-- **Install Ruby**
-- **Install Rails**
-- **Install Postgresql or any RDMS that suits you** 
-- Run **rails db:create**
-- Run **rails db:migrate**
-
-### Usage
-- navigate to the directory **recipe-app**
-- Run **bundle install** on your terminal
-- Run **rails s** on your terminal
-- Enter **http://localhost:3000/** on your browser to view page
-
+### Usage and Installation
+- Navigate to the directory `cd Recipe-app` (case sensitive, make sure you type the correct path)
+- Run `bundle install` in your terminal (in case you need to update gems run `bundle update`)
+- To setup database and tailwind run the following commands:
+  - `rails db:create`
+  - `rails db:migrate`
+  - `rails db:seed` (to populate initial data from db/seeds.rb file)
+  - `rails tailwindcss:build` (to build necessary configurations for tailwind)
+- Run `rails s` on your terminal
+- Enter **http://localhost:3000/ or localhost:3000** on your browser to view the project.
+- **Congratulations! App should run successfully.**
 ## Authors
 
 👤 **Dozie Udeagha**
